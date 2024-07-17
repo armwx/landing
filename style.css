@@ -1,34 +1,61 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    flex: 1;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+}
+
+h2, h3, h4, h5 {
+    margin: 0;
+    margin-top: 8px;
 }
 
 .grid {
     display: flex;
     flex-direction: row;
-    padding: 56px;
     gap: 16px;
+}
+
+section.cards {
+    padding: 56px;
+}
+
+.hero {
+    width: 80%;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
     font-size: 48px;
     font-weight: bolder;
     color: #F9FAF8;
+    margin: 0;
+    margin-bottom: 16px;
 }
 
 .hero h2 {
     font-size: 18px;
     color: #E5E7EB;
+    
+    margin: 0;
+    margin-bottom: 16px;
 }
 
 button {
     background-color: #3882F6;
+    color: #F9FAF8;
     border: 0;
-    padding: 8px 16px;
     width: fit-content;
+    padding: 8px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .information {
@@ -39,6 +66,7 @@ button {
 
 .dark {
     background-color: #1F2937;
+    max-width: 100vwh;
 }
 
 .quote h3 {
@@ -46,18 +74,21 @@ button {
     font-weight: lighter;
     font-style: italic;
     color: #1F2937;
+    margin: 0 auto;
 }
 
-/* Post content */ 
+/* Post content */
 
 .hero img {
     width: 50%;
-    height: 300px;
+    border-radius: 4px;
 }
 
 .card img {
     width: 240px;
     height: 240px;
+    border: 4px solid #3882F6;
+    border-radius: 16px;
 }
 
 .card {
@@ -69,17 +100,56 @@ button {
 
 
 section {
-    width: 100%;
+    width: 70%;
     height: 100%;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Using wrappers for BG color width 100% */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    color: #E5E7EB;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
 .content {
     display: flex;
     flex-direction: column;
+    align-content: center;
+    width: 60%;
 }
 
 .quote {
@@ -90,20 +160,20 @@ section {
 
 .cta {
     background-color: #3882F6;
-    width: fit-content;
-    padding: 16px 100px;
+    width: 80%;
+    padding: 40px 100px;
     color: #F9FAF8;
+    border-radius: 8px;
 }
 
 .cta button {
-    background-color: #3882F6;
-    color: #F9FAF8;
     height: fit-content;
     margin: auto;
+    border: 2px solid #E5E7EB;
 }
 
-section .padded {
-    background-color: aqua;
-    width: 100%;
-    padding: 100px 200px;
+footer {
+    text-align: center;
+    color: #F9FAF8;
+    height: 80px;
 }
